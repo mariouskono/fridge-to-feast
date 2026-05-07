@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // Target komputasi backend lokal
-            const response = await fetch('http://127.0.0.1:8000/api/analyze', {
+            const response = await fetch('https://mariouskono-fridgetofeast.hf.space/api/analyze', {
                 method: 'POST',
                 body: formData
             });
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         } catch (error) {
             console.error('Computation Error:', error);
-            alert('Failed to connect to the backend infrastructure. Ensure FastAPI is running on localhost:8000.');
+            alert('Failed to connect to the backend infrastructure. Ensure the Hugging Face space is active.');
             resetUI();
         }
     });
