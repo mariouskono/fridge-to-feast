@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Author | FridgeToFeast</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%234f46e5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589c-.34 0-.66.056-.95.158A5.98 5.98 0 0 0 12 2a6 6 0 0 0-3.643 4.178c-.29-.102-.61-.158-.95-.158a4 4 0 0 0-2.134 7.589c.411.197.727.584.727 1.041V20a1 1 0 0 0 1 1Z'/><path d='M6 17h12'/></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+                    colors: {
+                        primary: { 50: '#eef2ff', 100: '#e0e7ff', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca', 900: '#312e81' },
+                        dark: { bg: '#0f172a', card: '#1e293b', border: '#334155', text: '#f8fafc', textMuted: '#94a3b8' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background-color 0.3s, color 0.3s; }
+        .hamburger-line { transition: all 0.3s ease-in-out; transform-origin: center; }
+        .menu-open .line-1 { transform: translateY(8px) rotate(45deg); }
+        .menu-open .line-2 { opacity: 0; }
+        .menu-open .line-3 { transform: translateY(-8px) rotate(-45deg); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-dark-bg dark:text-dark-text antialiased min-h-screen flex flex-col">
+
+    <!-- Navbar Component -->
+    <div id="navbar-placeholder"></div>
+
+    <main class="flex-grow pt-32 pb-24 w-full max-w-7xl mx-auto px-6 flex items-center justify-center">
+        
+        <div class="max-w-5xl mx-auto bg-white dark:bg-dark-card rounded-[3rem] border border-slate-200 dark:border-dark-border overflow-hidden shadow-[0_20px_50px_-15px_rgba(0,0,0,0.1)] dark:shadow-none flex flex-col md:flex-row relative">
+            
+            <!-- Decorative Background Element -->
+            <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+                <div class="absolute -top-24 -right-24 w-64 h-64 bg-primary-500/10 dark:bg-primary-500/5 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-primary-500/10 dark:bg-primary-500/5 rounded-full blur-3xl"></div>
+            </div>
+
+            <!-- Profile Image -->
+            <div class="md:w-5/12 relative z-10">
+                <div class="h-64 md:h-full w-full bg-slate-100 dark:bg-slate-800 relative">
+                    <img src="../images/profilepic.jpg" alt="Author Profile" class="absolute inset-0 w-full h-full object-cover">
+                    <!-- Gradient Overlay for smooth blend -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent md:bg-gradient-to-r"></div>
+                </div>
+            </div>
+            
+            <!-- Profile Info -->
+            <div class="p-10 md:p-16 md:w-7/12 flex flex-col justify-center relative z-10">
+                <div class="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-bold bg-primary-100 text-primary-800 dark:bg-primary-900/40 dark:text-primary-400 mb-6 w-max border border-primary-200 dark:border-primary-800">
+                    Lead Developer & ML Engineer
+                </div>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-4 tracking-tight">Bertnardo Mario Uskono</h1>
+                <h2 class="text-xl text-primary-600 dark:text-primary-400 font-semibold mb-6">AI/ML Engineer • Computer Vision</h2>
+                
+                <p class="text-slate-600 dark:text-dark-textMuted mb-8 leading-relaxed text-lg">
+                    Passionate about Artificial Intelligence and creating practical applications that bridge the gap between advanced technology and daily life. I developed this YOLOv8-based model to automate ingredient detection, making smart culinary recommendations accessible to everyone.
+                </p>
+                
+                <div class="flex space-x-6 mt-auto pt-8 border-t border-slate-100 dark:border-dark-border">
+                    <a href="https://www.linkedin.com/in/bertnardo-mario-uskono/" class="w-12 h-12 bg-slate-50 dark:bg-slate-800 rounded-full flex items-center justify-center text-slate-500 hover:text-primary-600 hover:bg-primary-50 dark:hover:bg-primary-900/30 transition-all border border-slate-200 dark:border-slate-700">
+                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                    <a href="https://github.com/mariouskono" class="w-12 h-12 bg-slate-50 dark:bg-slate-800 rounded-full flex items-center justify-center text-slate-500 hover:text-primary-600 hover:bg-primary-50 dark:hover:bg-primary-900/30 transition-all border border-slate-200 dark:border-slate-700">
+                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer Component -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
